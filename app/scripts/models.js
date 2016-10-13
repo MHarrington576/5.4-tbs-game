@@ -3,7 +3,7 @@ var $ = require('jquery');
 var enemyHealth = EnemyChar.health;
 var playerHealth = PlayerChar.health;
 
-function PlayerCharacter(config){
+function Player(config){
   config = config || {};
   $.extend(this, config);
   this.health = 1000;
@@ -11,7 +11,7 @@ function PlayerCharacter(config){
 }
 
 function PlayerChar(){
-  PlayerCharacter.call(this, config);
+  Player.call(this, config);
 }
 
 function Enemy(config){
@@ -25,8 +25,8 @@ function EnemyChar(){
   this.health = 500;
 }
 
-PlayerChar.prototype = new PlayerCharacter();
-PlayerCharacter.prototype.attack = function(enemyHealth){
+PlayerChar.prototype = new Player();
+Player.prototype.attack = function(enemyHealth){
   //play sound
   var damageDealt = //semi-random number
   enemyHealth = enemyHealth - damageDealt;
@@ -53,3 +53,10 @@ Enemy.prototype.attack = function(playerHealth){
     }
   }
 }
+
+module.exports = {
+  Player: Player,
+  PlayerChar: PlayerChar,
+  Enemy: Enemy,
+  EnemyChar: EnemyChar
+};

@@ -1,4 +1,5 @@
 var $ = require('jquery');
+var models = require('models.js');
 
 function launchGame(){
   //display message
@@ -6,5 +7,5 @@ function launchGame(){
 
 $('.attack-btn').on('click', function(event){
   event.preventDefault();
-  PlayerCharacter.prototype.attack();
+  models.PlayerCharacter.prototype.attack();
 });
