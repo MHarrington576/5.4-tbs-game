@@ -24,39 +24,15 @@ function Enemy(config){
   this.playable = false;
 }
 
-function EnemyCharBank1(){
+function EnemyChar(){
   Enemy.call(this, config);
   this.name = undefined;
-  this.health = 500;
-  this.strength = undefined; //random number from 55 -> 110 = hp decrease
-}
-
-function EnemyCharBank2(){
-  Enemy.call(this, config);
-  this.name = undefined;
-  this.health = 750;
-  this.strength = undefined; //random number from 90 -> 175 = hp decrease
-}
-
-function EnemyCharBank3(){
-  Enemy.call(this, config);
-  this.name = undefined;
-  this.health = 1000;
-  this.strength = undefined; //random number from 120 -> 200 = hp decrease
-}
-
-function Boss(){
-  Enemy.call(this, config);
-  this.name = undefined;
-  this.health = 2250;
-  this.strength = undefined; //random number from 170 -> 250 = hp decrease
+  this.health = 500; //redefined when called in index.js
+  this.strength = undefined; //random 55-110, 90-175, 120-200, 170-250 player hp decrease
 }
 
 PlayerChar.prototype = new Player();
-EnemyCharBank1.prototype = new Enemy();
-EnemyCharBank2.prototype = new Enemy();
-EnemyCharBank3.prototype = new Enemy();
-Boss.prototype = new Enemy();
+EnemyChar.prototype = new Enemy();
 
 Player.prototype.attack = function(enemyHealth){
   //play sound
@@ -90,8 +66,5 @@ module.exports = {
   Player: Player,
   PlayerChar: PlayerChar,
   Enemy: Enemy,
-  EnemyCharBank1: EnemyCharBank1,
-  EnemyCharBank2: EnemyCharBank2,
-  EnemyCharBank3: EnemyCharBank3,
-  Boss: Boss
+  EnemyChar: EnemyChar
 };
