@@ -8,6 +8,13 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-image: url('../images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  // background-repeat: no-repeat;
+
+}
 
 *,
 *::before,
@@ -17,6 +24,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 h1{
@@ -25,6 +33,13 @@ h1{
   text-align: center;
   font-weight: lighter;
   font-size: 80px;
+  color: #6D6D6D;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+  font-size: 100px;
 }
 
 h2{
@@ -32,10 +47,19 @@ h2{
   margin-top: 0;
   text-align: center;
   font-weight: lighter;
-  font-size: 40px
+  color: #6D6D6D;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+  font-size: 45px
 }
 
 .new-game{
+  display: inline-block;
+  text-align: center;
+  border-bottom: 2px solid black;
   button{
     background-color: #FBD000;
     border: 2px solid black;
