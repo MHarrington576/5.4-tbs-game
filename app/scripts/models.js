@@ -1,4 +1,7 @@
 var $ = require('jquery');
+var _ = require('underscore');
+var models = require('./models');
+var listTemplate = require('../templates/listTemplate.hbs')
 
 var enemyHealth = EnemyChar.health;
 var playerHealth = PlayerChar.health;

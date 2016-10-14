@@ -1,5 +1,7 @@
 var $ = require('jquery');
+var _ = require('underscore');
 var models = require('models.js');
+var listTemplate = require('../templates/listTemplate.hbs');
 
 function launchGame(){
   //display message
