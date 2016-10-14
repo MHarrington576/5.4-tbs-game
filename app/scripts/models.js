@@ -15,6 +15,7 @@ function Player(config){
 
 function PlayerChar(){
   Player.call(this, config);
+  this.name = undefined;
 }
 
 function Enemy(config){
@@ -23,12 +24,40 @@ function Enemy(config){
   this.playable = false;
 }
 
-function EnemyChar(){
+function EnemyCharBank1(){
   Enemy.call(this, config);
+  this.name = undefined;
   this.health = 500;
+  this.strength = undefined; //random number from 55 -> 110 = hp decrease
+}
+
+function EnemyCharBank2(){
+  Enemy.call(this, config);
+  this.name = undefined;
+  this.health = 750;
+  this.strength = undefined; //random number from 90 -> 175 = hp decrease
+}
+
+function EnemyCharBank3(){
+  Enemy.call(this, config);
+  this.name = undefined;
+  this.health = 1000;
+  this.strength = undefined; //random number from 120 -> 200 = hp decrease
+}
+
+function Boss(){
+  Enemy.call(this, config);
+  this.name = undefined;
+  this.health = 2250;
+  this.strength = undefined; //random number from 170 -> 250 = hp decrease
 }
 
 PlayerChar.prototype = new Player();
+EnemyCharBank1.prototype = new Enemy();
+EnemyCharBank2.prototype = new Enemy();
+EnemyCharBank3.prototype = new Enemy();
+Boss.prototype = new Enemy();
+
 Player.prototype.attack = function(enemyHealth){
   //play sound
   var damageDealt = //semi-random number
@@ -38,7 +67,7 @@ Player.prototype.attack = function(enemyHealth){
       window.setTimeout;
     }
   } if else(enemyHealth <= 0) {
-    function endMatch(){
+      function endMatch(){
       //switch screen to display victory message
     }
   }
@@ -61,5 +90,8 @@ module.exports = {
   Player: Player,
   PlayerChar: PlayerChar,
   Enemy: Enemy,
-  EnemyChar: EnemyChar
+  EnemyCharBank1: EnemyCharBank1,
+  EnemyCharBank2: EnemyCharBank2,
+  EnemyCharBank3: EnemyCharBank3,
+  Boss: Boss
 };
