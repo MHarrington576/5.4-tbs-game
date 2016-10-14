@@ -1,3 +1,6 @@
+@font-face {
+  font-family: "Kingdom Hearts"; src:url('http://static.tumblr.com/npggxjg/rnqm22s5d/kingdom_hearts.ttf');
+}
 
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
@@ -14,4 +17,34 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 img {
   max-width: 100%;
+}
+
+h1{
+  font-family: "Kingdom Hearts", sans-serif;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: lighter;;
+  font-size: 80px;
+}
+
+h2{
+  font-family: "Kingdom Hearts", sans-serif;
+  margin-top: 0;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 40px
+}
+
+.new-game{
+  button{
+    background-color: #FBD000;
+    border: 2px solid black;
+    height: 30%;
+  }
+  h4{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline;
+  }
 }
