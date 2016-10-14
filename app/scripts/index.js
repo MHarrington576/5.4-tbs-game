@@ -62,6 +62,7 @@ var healthPotionCount = 3;
 var shieldCount = 3;
 
 var newGameBtn = $('.btn-default');
+var healthBar;
 
 function launchGame(){
   //display instructions -> HUD & gameplay
@@ -99,6 +100,8 @@ $('.character-select-photo').on('click', function(event){
   }
   return player;
 });
+
+healthBar.style.width = (playerHealth / 10) + '%'
 
 $('.attack-btn').on('click', function(event){
   event.preventDefault();
