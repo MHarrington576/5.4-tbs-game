@@ -42,6 +42,7 @@ var thirdEnemy = undefined; //random opponent from EnemyCharBank3
 var finalBoss = enemiesRound4[0];
 
 var healthPotionCount = 3;
+var shieldCount = 3;
 
 function launchGame(){
   //display message
@@ -53,6 +54,15 @@ function takeHealthPotion(){
     player.health = 1000;
   } if else(healthPotionCount <=0) {
       //display message: "You've run out of health potions!"
+  }
+}
+
+function useShield(){
+  if(shieldCount > 0) {
+    shieldCount = shieldCount - 1;
+    damageReceived = 0;
+  } if else(shieldCount <= 0) {
+    //display message: "You've run out of shields!"
   }
 }
 
