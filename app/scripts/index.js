@@ -61,7 +61,7 @@ var finalBoss = enemyBank4[0];
 var healthPotionCount = 3;
 var shieldCount = 3;
 
-var newGameBtn = $('.btn-default');
+var newGameBtn = $('#start-button');
 var healthBar;
 
 function launchGame(){
