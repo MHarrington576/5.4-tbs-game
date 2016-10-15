@@ -27,7 +27,7 @@ img {
 
 h1{
   font-family: "Kingdom Hearts", sans-serif;
-  margin-bottom: 0;
+  margin-top: 10;
   text-align: center;
   font-weight: lighter;
   font-size: 80px;
@@ -42,7 +42,7 @@ h1{
 
 h2{
   font-family: "Kingdom Hearts", sans-serif;
-  margin-top: 0;
+  margin: 0;
   text-align: center;
   font-weight: lighter;
   color: #6D6D6D;
@@ -54,19 +54,189 @@ h2{
   font-size: 45px
 }
 
-.new-game{
-  display: inline-block;
-  text-align: center;
+.press-start{
+  display: inline;
   border-bottom: 2px solid black;
+  text-align: center;
   button{
     background-color: #FBD000;
     border: 2px solid black;
-    height: 30%;
   }
-  h4{
+  h3{
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
-    display: inline;
+    display: inline-block;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
   }
+}
+
+.select-character-screen{
+  visibility: hidden;
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    font-size: 45px;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+}
+
+select{
+  .value1{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+  .value-2{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+  .value-3{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+  .value-4{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+}
+
+.launch-game{
+  visibility: hidden;
+}
+
+.level-one{
+  visibility: hidden;
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+    font-size: 45px
+  }
+}
+
+.level-two{
+  visibility: hidden;
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+    font-size: 45px
+  }
+}
+
+.level-three{
+  visibility: hidden;
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+    font-size: 45px
+  }
+}
+
+.final-level{
+  visibility: hidden;
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    color: #6D6D6D;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+    font-size: 45px
+  }
+}
+
+.choosen-char{
+  visibility: hidden;
+}
+
+.enemy-char{
+  visibility: hidden;
+}
+
+.winner{
+  visibility: hidden;
+  font-family: "Kingdom Hearts", sans-serif;
+  font-size: 45px;
+  color: #6D6D6D;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+.loser{
+  visibility: hidden;
+  font-family: "Kingdom Hearts", sans-serif;
+  font-size: 45px;
+  color: #6D6D6D;
+  text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
 }

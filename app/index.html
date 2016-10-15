@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,28 +7,82 @@
   </head>
   <body>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="main-screen">
           <h1>Kingdom Hearts Game!</h1>
           <h2>
             Help Sora and his friends defeat the Heartless, and restore his world!
           </h2>
-          <div class="new-game">
+          <div class="press-start">
             <button class="btn btn-default" type="submit"></button>
-            <h4>Press Start</h4>
+            <h3>Press Start</h3>
           </div>
         </div>
-
-        <div class="row js-characters">
-          <!-- Populates from javascript -->
-        </div>
-
-        <div class="row js-heartless">
-          <!-- Populates from javascript -->
-        </div>
-
       </div>
+    </div>
+
+    <div class="select-character-screen">
+      <h2 id="select-title">Choose a Character!></h2>
+      <select name="select-character">
+        <option value="value1">Sora</option>
+        <option value="value2">Roxas</option>
+        <option value="value3">Riku</option>
+        <option value="value4">Kairi</option>
+      </select>
+    </div>
+
+    <div class="launch-game">
+      <div class="level-one">
+          <h2 class="level-title-one">Level One!</h2>
+      </div>
+      <div class="level-two">
+        <h2 class="level-title-two">Level Two!</h2>
+      </div>
+      <div class="level-three">
+        <h2 class="level-title-three">Level Three!</h2>
+      </div>
+      <div class="final-level">
+        <h2 class="level-title-final">Final Level!</h2>
+      </div>
+    </div>
+
+    <div class="choosen-char">
+      <div class="health-bar">
+        <span></span>
+      </div>
+      <div class="fight-options">
+      <button class="btn btn-default" id="attack" type="submit">Attack!</button>
+      <button class="btn btn-default" id="health-potion" type="submit">Restore Health!</a>
+      <button class="btn btn-default" id="sheild" type="submit">Use Sheild!</a>
+      </div>
+    </div>
+
+    <div class="enemy-char">
+      <div class="health-bar">
+        <span></span>
+      </div>
+      <div class="fight-options">
+        <span id="enemy-attack"></span>
+      </div>
+    </div>
+
+    <div class="row js-characters">
+        <!-- Populates from javascript -->
+    </div>
+
+    <div class="row js-heartless">
+        <!-- Populates from javascript -->
+    </div>
+
+    <div class="winner">
+      <h2 id="winner-message">Congratulations, you've defeated the heartless!</h2>
+        <button class="btn btn-default" id="play-again-winner" type="submit">Play Again...?</button>
+    </div>
+
+    <div class="loser">
+      <h2 id="loser-message">Oh no! You were defeated...</h2>
+        <button class="btn btn-default" id="play-again-loser" type="submit">Play Again...?</button>
     </div>
 
     <script src="js/bundle.js"></script>
