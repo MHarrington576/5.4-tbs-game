@@ -1,28 +1,16 @@
-$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-@font-face {
-  font-family: "Kingdom Hearts"; src:url('http://static.tumblr.com/npggxjg/rnqm22s5d/kingdom_hearts.ttf');
-}
-
-<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
-body {
-  background-image: url('../images/background.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-*, *::before, *::after {
-=======
 // Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
+@font-face {
+  font-family: "Kingdom Hearts"; src:url('http://static.tumblr.com/npggxjg/rnqm22s5d/kingdom_hearts.ttf');
+}
+
 *,
 *::before,
 *::after {
->>>>>>> updated layout
   box-sizing: border-box;
 }
 
@@ -31,44 +19,6 @@ img {
   height: auto;
 }
 
-<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
-h1 {
-  font-family: "Kingdom Hearts", sans-serif;
-  margin-top: 10;
-  text-align: center;
-  font-weight: lighter;
-  font-size: 80px;
-  color: #6D6D6D;
-  text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-  font-size: 100px;
-}
-
-h2 {
-  font-family: "Kingdom Hearts", sans-serif;
-  margin: 0;
-  text-align: center;
-  font-weight: lighter;
-  color: #6D6D6D;
-  text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-  font-size: 45px
-}
-
-.press-start {
-  display: inline;
-  border-bottom: 2px solid black;
-  text-align: center;
-  button {
-    background-color: #FBD000;
-    border: 2px solid black;
-=======
 .title-screen{
   //visibility: hidden;
   background: #0d0d0d;
@@ -124,7 +74,6 @@ h2 {
     box-shadow: inset 0 0 0.4em 0.4em #FC7302;
     height: 25px;
     margin-bottom: 4px;
->>>>>>> updated layout
   }
   h3 {
     font-family: monospace;
@@ -147,14 +96,9 @@ h2 {
   }
 }
 
-<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
-select {
-  .value1 {
-=======
 select{
   visibility: hidden;
   .value1{
->>>>>>> updated layout
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
