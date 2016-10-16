@@ -3,7 +3,6 @@ var _ = require('underscore');
 var models = require('./models');
 var listTemplate = require('../templates/listTemplate.hbs');
 
-
 /////////////////////////////////// Variables //////////////////////////////////
 var $titleScreen = $(".title-screen");
   $titleScreen.addClass("show");
@@ -24,15 +23,6 @@ var $victoryScreen = $(".winner-screen");
 
 var heroes = [
   new models.PlayerChar(
-<<<<<<< 8ddc284038262b94e1cca0a0c8d2305affe6fdec
-    {name: 'Sora', health: 1000});
-  new models.PlayerChar(
-    {name: 'Roxas', health: 1000});
-  new models.PlayerChar(
-    {name: 'Riku', health: 1000});
-  new models.PlayerChar(
-    {name: 'Kairi', health: 1000});
-=======
     {name: 'Sora', image:'images/fighting-sora.png' health: 1200});
   new models.PlayerChar(
     {name: 'Roxas', image:'images/fighting-roxas.png' health: 1150});
@@ -40,7 +30,6 @@ var heroes = [
     {name: 'Riku', image:'images/fighting-riku.png' health: 1100});
   new models.PlayerChar(
     {name: 'Kairi', image:'images/fighting-kairi.png' health: 950});
->>>>>>> finished graphics
 ];
 
 var enemyBank1 = [
@@ -76,21 +65,13 @@ var enemyBank3 = [
     {name: 'HL Mu', image:'images/gaurded-armor.png' health: 1000, strength-min: 120, strength-max:200});
 ];
 
-<<<<<<< 8ddc284038262b94e1cca0a0c8d2305affe6fdec
 var finalBoss = new models.EnemyChar(
-    {name: 'HL Omega', health: 1850, strength-min: 170, strength-max:255});
-=======
-var enemyBank4 = [
-  new models.EnemyChar(
     {name: 'HL Omega', image:'images/boss.png' health: 1850, strength-min: 170, strength-max:255});
-];
->>>>>>> finished graphics
 
 var player = undefined; //selected by user at start of game
 var firstEnemy = undefined; //random opponent from enemyBank1
 var secondEnemy = undefined; //random opponent from enemyBank2
 var thirdEnemy = undefined; //random opponent from enemyBank3
-
 
 ////////////////////////////////// Title Screen ////////////////////////////////
 var newGameBtn = $('#start-button');
@@ -113,7 +94,6 @@ function displayInstructions(){
 newGameBtn.addEventListener('click', launchGame());
 instructionsBtn.addEventListener('click', displayInstructions());
 
-
 ///////////////////////////////// Instructions /////////////////////////////////
 var exitInstructionsBtn = $("#exit-instructions-button");
 
@@ -125,7 +105,6 @@ function returnToTitleFromInstructions(){
 }
 
 exitInstructionsBtn.addEventListener('click', returnToTitleFromInstructions());
-
 
 /////////////////////////////// Character Select ///////////////////////////////
 var toBattleBtn = $("#to-battle-button");
@@ -159,7 +138,6 @@ toBattleBtn.on('click', function(event){
     alert("Please select a character.");
   }
 });
-
 
 //////////////////////////////////// Battle ////////////////////////////////////
 var attackBtn = $(".attack-button");
@@ -278,7 +256,6 @@ if(finalBoss.health <= 0){
   alert("Congratulations! You did it!")
   toVictoryScreen();
 }
-
 
 /////////////////////////////////// Victory ////////////////////////////////////
 var endGameBtn = $("#end-game-btn");
