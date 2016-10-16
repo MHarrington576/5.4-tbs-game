@@ -4,6 +4,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   font-family: "Kingdom Hearts"; src:url('http://static.tumblr.com/npggxjg/rnqm22s5d/kingdom_hearts.ttf');
 }
 
+<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
 body {
   background-image: url('../images/background.jpg');
   background-position: center;
@@ -11,6 +12,17 @@ body {
 }
 
 *, *::before, *::after {
+=======
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+*,
+*::before,
+*::after {
+>>>>>>> updated layout
   box-sizing: border-box;
 }
 
@@ -19,6 +31,7 @@ img {
   height: auto;
 }
 
+<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
 h1 {
   font-family: "Kingdom Hearts", sans-serif;
   margin-top: 10;
@@ -55,18 +68,72 @@ h2 {
   button {
     background-color: #FBD000;
     border: 2px solid black;
+=======
+.title-screen{
+  //visibility: hidden;
+  background: #0d0d0d;
+  h1{
+    font-family: "Kingdom Hearts", sans-serif;
+    margin-top: 10;
+    margin-bottom: 0;
+    font-size: 120px;
+    text-align: center;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+  }
+  h2{
+    font-family: "Kingdom Hearts", sans-serif;
+    margin: 0;
+    font-size: 70px;
+    text-align: center;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+  }
+}
+
+.title-pic{
+  display: inline;
+  img{
+    float: right;
+    padding-left: 0;
+    padding-right: 25px;
+    border-radius: 50%;
+    height: 460px;
+    width: 400px;
+  }
+}
+
+.col-md-5{
+  //visibility: hidden;
+  position: relative;
+  top: 180px;
+  padding: 0;
+  text-align: right;
+}
+
+.col-md-7{
+  padding: 0;
+}
+
+.press-start{
+  border-bottom: 1px solid #A4A4A4;
+  display: inline-block;
+  button{
+    background-color: #ffd700;
+    border: 2px solid #A4A4A4;
+    box-shadow: inset 0 0 0.4em 0.4em #FC7302;
+    height: 25px;
+    margin-bottom: 4px;
+>>>>>>> updated layout
   }
   h3 {
     font-family: monospace;
-    font-weight: bold;
-    font-size: 20px;
+    padding-left: 6px;
+    margin: 0;
+    font-size: 30px;
     display: inline-block;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
 }
 
@@ -75,63 +142,49 @@ h2 {
   h2 {
     font-family: "Kingdom Hearts", sans-serif;
     font-size: 45px;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
+<<<<<<< cdba17e7d5b0707054eccf50006b420e8dd2cf91
 select {
   .value1 {
+=======
+select{
+  visibility: hidden;
+  .value1{
+>>>>>>> updated layout
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
   .value-2 {
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
   .value-3 {
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
   .value-4 {
     font-family: monospace;
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #A4A4A4;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
 }
 
@@ -144,14 +197,9 @@ select {
   h2 {
     font-family: "Kingdom Hearts", sans-serif;
     text-align: center;
-    font-weight: lighter;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
-    font-size: 45px
+    font-size: 45px;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
@@ -160,14 +208,9 @@ select {
   h2 {
     font-family: "Kingdom Hearts", sans-serif;
     text-align: center;
-    font-weight: lighter;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
-    font-size: 45px
+    font-size: 45px;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
@@ -176,14 +219,9 @@ select {
   h2 {
     font-family: "Kingdom Hearts", sans-serif;
     text-align: center;
-    font-weight: lighter;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
-    font-size: 45px
+    font-size: 45px;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
@@ -192,14 +230,9 @@ select {
   h2 {
     font-family: "Kingdom Hearts", sans-serif;
     text-align: center;
-    font-weight: lighter;
-    color: #6D6D6D;
-    text-shadow:
-     -1px -1px 0 #000,
-     1px -1px 0 #000,
-     -1px 1px 0 #000,
-     1px 1px 0 #000;
-    font-size: 45px
+    font-size: 45px;
+    color: #A4A4A4;
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
