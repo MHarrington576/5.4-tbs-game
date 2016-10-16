@@ -21,20 +21,24 @@ img {
 
 .title-screen{
   //visibility: hidden;
-  background: #0d0d0d;
+  background-color: #0d0d0d;
+  background-size: cover;
+  height: 100%;
   h1{
-    font-family: "Kingdom Hearts", sans-serif;
-    margin-top: 10;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bolder;
+    margin-top: 30;
     margin-bottom: 0;
-    font-size: 120px;
+    font-size: 70px;
     text-align: center;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
   h2{
-    font-family: "Kingdom Hearts", sans-serif;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bold;
     margin: 0;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
@@ -54,9 +58,8 @@ img {
 }
 
 .col-md-5{
-  visibility: hidden;
   position: relative;
-  top: 180px;
+  top: 200px;
   padding: 0;
   text-align: right;
 }
@@ -88,45 +91,33 @@ img {
 
 .select-character-screen {
   visibility: hidden;
+  background-image: url("../images/choose-player.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  img{
+    height: 300px;
+  }
+  .col-md-3{
+    text-align: center;
+    padding-top: 20px;
+  }
   h2 {
-    font-family: "Kingdom Hearts", sans-serif;
-    font-size: 45px;
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+    font-size: 80px;
+    font-weight: bolder;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
-}
-
-select{
-  visibility: hidden;
-  .value1{
+    h3{
     font-family: monospace;
     font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
-    color: #A4A4A4;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  }
-  .value-2 {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
-    color: #A4A4A4;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  }
-  .value-3 {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
-    color: #A4A4A4;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  }
-  .value-4 {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 20px;
-    display: inline-block;
+    font-size: 30px;
+    text-align: center;
     color: #A4A4A4;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
@@ -138,10 +129,18 @@ select{
 
 .level-one {
   visibility: hidden;
-  h2 {
-    font-family: "Kingdom Hearts", sans-serif;
+  background-image: url("../images/first-arena.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  h1 {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bolder;
     text-align: center;
-    font-size: 45px;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 80px;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
@@ -149,10 +148,18 @@ select{
 
 .level-two {
   visibility: hidden;
-  h2 {
-    font-family: "Kingdom Hearts", sans-serif;
+  background-image: url("../images/second-arena.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  h1 {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bolder;
     text-align: center;
-    font-size: 45px;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 80px;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
@@ -160,10 +167,18 @@ select{
 
 .level-three {
   visibility: hidden;
-  h2 {
+  background-image: url("../images/third-arena.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  h1 {
     font-family: "Kingdom Hearts", sans-serif;
+    font-weight: bolder;
     text-align: center;
-    font-size: 45px;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 80px;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
@@ -171,17 +186,28 @@ select{
 
 .final-level {
   visibility: hidden;
-  h2 {
-    font-family: "Kingdom Hearts", sans-serif;
+  background-image: url("../images/final-arena.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  h1 {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bolder;
     text-align: center;
-    font-size: 45px;
+    padding-top: 30px;
+    margin: 0;
+    font-size: 80px;
     color: #A4A4A4;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
   }
 }
 
-.choosen-char {
+.chosen-char {
   visibility: hidden;
+  .fight-options{
+    visibility: hidden;
+  }
 }
 
 .enemy-char {
@@ -190,7 +216,8 @@ select{
 
 .winner {
   visibility: hidden;
-  font-family: "Kingdom Hearts", sans-serif;
+  font-family: 'Calligraffitti', cursive;
+  font-weight: bolder;
   font-size: 45px;
   color: #6D6D6D;
   text-shadow:
@@ -202,7 +229,8 @@ select{
 
 .loser {
   visibility: hidden;
-  font-family: "Kingdom Hearts", sans-serif;
+  font-family: 'Calligraffitti', cursive;
+  font-weight: bolder;
   font-size: 45px;
   color: #6D6D6D;
   text-shadow:

@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Kingdom Hearts Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -20,7 +21,7 @@
         <div class="col-md-5">
           <div class="press-start">
             <button class="btn btn-default" id="start-button" type="submit"></button>
-            <h3>Press Start</h3>
+            <a href="#"><h3>Press Start</h3></a>
           </div>
         </div>
         <div class="col-md-7">
@@ -32,31 +33,43 @@
     </div>
 
     <div class="select-character-screen">
-      <h2 id="select-title">Choose a Character!></h2>
-      <select name="select-character">
-        <option value="value1">Sora</option>
-        <option value="value2">Roxas</option>
-        <option value="value3">Riku</option>
-        <option value="value4">Kairi</option>
-      </select>
+      <h2>Choose a Character!</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="images/char-sora.png">
+          <a href="#"><h3>Sora</h3></a>
+        </div>
+        <div class="col-md-3">
+          <img src="images/char-roxas.png">
+          <a href="#"><h3>Roxas<h3></a>
+        </div>
+        <div class="col-md-3">
+          <img src="images/char-riku.png">
+          <a href="#"><h3>Riku</h3></a>
+        </div>
+        <div class="col-md-3">
+          <img src="images/char-kairi.png">
+          <a href="#"><h3>Kairi</h3></a>
+        </div>
+      </div>
     </div>
 
     <div class="launch-game"></div>
 
     <div class="level-one">
-        <h2 class="level-title-one">Level One!</h2>
+        <h1 class="level-title-one">Level One!</h1>
     </div>
 
     <div class="level-two">
-      <h2 class="level-title-two">Level Two!</h2>
+      <h1 class="level-title-two">Level Two!</h1>
     </div>
 
     <div class="level-three">
-      <h2 class="level-title-three">Level Three!</h2>
+      <h1 class="level-title-three">Level Three!</h1>
     </div>
 
     <div class="final-level">
-      <h2 class="level-title-final">Final Level!</h2>
+      <h1 class="level-title-final">Final Level!</h1>
     </div>
 
     <div class="chosen-char">
@@ -64,9 +77,9 @@
         <span></span>
       </div>
       <div class="fight-options">
-      <button class="btn btn-default" id="attack" type="submit">Attack!</button>
-      <button class="btn btn-default" id="health-potion" type="submit">Restore Health!</a>
-      <button class="btn btn-default" id="sheild" type="submit">Use Sheild!</a>
+        <button class="btn btn-default" id="attack" type="submit">Attack!</button>
+        <button class="btn btn-default" id="health-potion" type="submit">Restore Health!</a>
+        <button class="btn btn-default" id="sheild" type="submit">Use Sheild!</a>
       </div>
     </div>
 
