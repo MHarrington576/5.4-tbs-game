@@ -15,40 +15,44 @@ var $victoryScreen = $(".winner-screen");
 
 var heroes = [
   new models.PlayerChar(
-    {name: 'Sora', image:'images/fighting-sora.png', health: 1200});
+    {name: 'Sora', image:'images/fighting-sora.png',
+    health: 1000, strength-min: 160, strength-max: 300});
   new models.PlayerChar(
-    {name: 'Roxas', image:'images/fighting-roxas.png', health: 1150});
+    {name: 'Roxas', image:'images/fighting-roxas.png',
+    health: 1000, strength-min: 150, strength-max: 310});
   new models.PlayerChar(
-    {name: 'Riku', image:'images/fighting-riku.png', health: 1100});
+    {name: 'Riku', image:'images/fighting-riku.png',
+    health: 1000, strength-min: 175, strength-max: 285});
   new models.PlayerChar(
-    {name: 'Kairi', image:'images/fighting-kairi.png', health: 950});
+    {name: 'Kairi', image:'images/fighting-kairi.png',
+    health: 1000, strength-min: 170, strength-max: 295});
 ];
 
 var enemyBank1 = [
   new models.EnemyChar(
     {name: 'HL Shadow One', image:'../images/shadow-one.png',
-    health: 500, strength-min: 40, strength-max:105});
+    health: 500, strength-min: 55, strength-max:110});
   new models.EnemyChar(
     {name: 'HL Shadow Two', image:'../images/shadow-two.png',
-    health: 500, strength-min: 45, strength-max:110});
+    health: 500, strength-min: 55, strength-max:110});
   new models.EnemyChar(
     {name: 'HL Shadow Three', image:'../images/shadow-three.png',
-    health: 500, strength-min: 50, strength-max:115});
+    health: 500, strength-min: 55, strength-max:110});
   new models.EnemyChar(
     {name: 'HL Red Nocturne', image:'../images/red-nocturne.png',
-    health: 500, strength-min: 55, strength-max:120});
+    health: 500, strength-min: 55, strength-max:110});
 ];
 
 var enemyBank2 = [
   new models.EnemyChar(
     {name: 'HL Fire Plant', image:'../images/fire-plant.png',
-    health: 750, strength-min: 75, strength-max:160});
+    health: 750, strength-min: 90, strength-max:175});
   new models.EnemyChar(
     {name: 'HL Blue Rhapsody', image:'../images/blue-rhapsody.png',
-    health: 750, strength-min: 80, strength-max:165});
+    health: 750, strength-min: 90, strength-max:175});
   new models.EnemyChar(
     {name: 'HL Powerwild', image:'../images/powerwild.png',
-    health: 750, strength-min: 85, strength-max:170});
+    health: 750, strength-min: 90, strength-max:175});
   new models.EnemyChar(
     {name: 'HL Soldier', image:'../images/soldier.png',
     health: 750, strength-min: 90, strength-max:175});
@@ -57,13 +61,13 @@ var enemyBank2 = [
 var enemyBank3 = [
   new models.EnemyChar(
     {name: 'HL Armored Knight', image:'../images/armored-knight.png',
-    health: 1000, strength-min: 105, strength-max:185});
+    health: 1000, strength-min: 120, strength-max:200});
   new models.EnemyChar(
     {name: 'HL Gargoyle', image:'../images/gargoyle.png',
-    health: 1000, strength-min: 110, strength-max:190});
+    health: 1000, strength-min: 120, strength-max:200});
   new models.EnemyChar(
     {name: 'HL Large Body', image:'../images/large-body.png',
-    health: 1000, strength-min: 115, strength-max:195});
+    health: 1000, strength-min: 120, strength-max:200});
   new models.EnemyChar(
     {name: 'HL Armored Guard', image:'../images/armored-guard.png',
     health: 1000, strength-min: 120, strength-max:200});
@@ -71,12 +75,12 @@ var enemyBank3 = [
 
 var finalBoss = new models.EnemyChar(
     {name: 'HL Boss', image:'../images/boss.png',
-    health: 1850, strength-min: 170, strength-max:255});
+    health: 1850, strength-min: 145, strength-max:255});
 
 var player = undefined; //selected by user at start of game
-var firstEnemy = undefined; //random opponent from enemyBank1
-var secondEnemy = undefined; //random opponent from enemyBank2
-var thirdEnemy = undefined; //random opponent from enemyBank3
+var firstEnemy = _.sample(enemyBank1);
+var secondEnemy = _.sample(enemyBank2);
+var thirdEnemy = _.sample(enemyBank3);
 
 ////////////////////////////////// Title Screen ////////////////////////////////
 var newGameBtn = $('#start-button');
@@ -113,11 +117,15 @@ exitInstructionsBtn.addEventListener('click', returnToTitleFromInstructions());
 
 /////////////////////////////// Character Select ///////////////////////////////
 var toBattleBtn = $("#to-battle-button");
+$('.select-your-character').html(listTemplate(context));
 
-$('.character-select-photo').on('click', function(event){
+$('.selected-char').on('click', function(event){
   event.preventDefault();
+  var selectedCharacter = $(this);
+  var characterName = selectedCharacter.data("character-name");
+
   if(this.id == '#select-sora') {
-    player = (_.filter(heroes)[0]);
+    player = (_.filter(heroes, {'name': characterName})[0]);
   } if else(this.id == '#select-roxas') {
       player = (_.filter(heroes)[1]);
   } if else(this.id == '#select-riku') {
@@ -152,8 +160,8 @@ var shieldBtn = $(".shield-button");
 var playerHealthBar = $(".player-health-bar");
 var enemyHealthBar = $(".enemy-health-bar");
 
-var healthPotionCount = 3;
-var shieldCount = 3;
+var healthPotionCount = 5;
+var shieldCount = 5;
 
 function takeHealthPotion(){
   if(healthPotionCount > 0) {

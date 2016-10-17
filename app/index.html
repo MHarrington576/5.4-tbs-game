@@ -9,7 +9,7 @@
   <body>
 
 
-<!--///////////////////////////////Title Screen//////////////////////////////-->
+<!--////////////////////////////// Title Screen /////////////////////////////-->
     <div class="title-screen active">
       <div class="row">
         <div class="col-md-12">
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-<!--//////////////////////////////Instructions///////////////////////////////-->
+<!--///////////////////////////// Instructions //////////////////////////////-->
     <div class="instructions-screen dormant">
       <div class="row">
         <div class="col-md-12">
@@ -52,30 +52,15 @@
       </div>
     </div>
 
-<!--/////////////////////////Character Select Screen/////////////////////////-->
+<!--//////////////////////// Character Select Screen ////////////////////////-->
     <div class="character-select-screen dormant">
       <h2>Choose a Character!</h2>
-      <div class="row">
-        <div class="col-md-3 dormant" id="sora-selected">
-          <img src="images/char-sora.png">
-          <h3>Sora</h3>
-        </div>
-        <div class="col-md-3 dormant" id="roxas-selected">
-          <img src="images/char-roxas.png">
-          <h3>Roxas<h3>
-        </div>
-        <div class="col-md-3 dormant" id="riku-selected">
-          <img src="images/char-riku.png">
-          <h3>Riku</h3>
-        </div>
-        <div class="col-md-3 dormant" id="kairi-selected">
-          <img src="images/char-kairi.png">
-          <h3>Kairi</h3>
-        </div>
+      <div class="select-your-character">
+        <!-- Populated by JS -->
       </div>
     </div>
 
-<!--/////////////////////////////////Battles/////////////////////////////////-->
+<!--//////////////////////////////// Battles ////////////////////////////////-->
     <div class="row level-one dormant">
       <div class="col-md-12">
         <h1 class="level-title-one">Level One</h1>
@@ -132,15 +117,7 @@
       </div>
     </div>
 
-    <div class="row js-characters">
-        <!-- Populates from javascript -->
-    </div>
-
-    <div class="row js-heartless">
-        <!-- Populates from javascript -->
-    </div>
-
-<!--//////////////////////////////Victory Screen/////////////////////////////-->
+<!--///////////////////////////// Victory Screen ////////////////////////////-->
     <div class="row winner-screen dormant">
       <h2 id="winner-message">Congratulations, you've defeated the Heartless!</h2>
         <button id="play-again-winner">Play Again!</button>
