@@ -11,6 +11,10 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .show {
   visibility: visible;
 }
@@ -123,17 +127,12 @@ img {
   }
 }
 
-.launch-game {
-  visibility: hidden;
-}
-
 .level-one {
-  visibility: hidden;
   background-image: url("../images/first-arena.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 800px;
   h1 {
     font-family: 'Calligraffitti', cursive;
     font-weight: bolder;
@@ -147,13 +146,12 @@ img {
 }
 
 .level-two {
-  visibility: hidden;
   background-image: url("../images/second-arena.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
-  h1 {
+  height: 800px;
+    h1 {
     font-family: 'Calligraffitti', cursive;
     font-weight: bolder;
     text-align: center;
@@ -166,12 +164,11 @@ img {
 }
 
 .level-three {
-  visibility: hidden;
   background-image: url("../images/third-arena.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 800px;
   h1 {
     font-family: "Calligraffitti", sans-serif;
     font-weight: bolder;
@@ -185,12 +182,11 @@ img {
 }
 
 .final-level {
-  visibility: hidden;
   background-image: url("../images/final-arena.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 800px;
   h1 {
     font-family: 'Calligraffitti', cursive;
     font-weight: bolder;
@@ -203,32 +199,7 @@ img {
   }
 }
 
-.chosen-char {
-  visibility: hidden;
-  .fight-options {
-    visibility: hidden;
-  }
-}
-
-.enemy-char {
-  visibility: hidden;
-}
-
-.winner {
-  visibility: hidden;
-  font-family: 'Calligraffitti', cursive;
-  font-weight: bolder;
-  font-size: 45px;
-  color: #6D6D6D;
-  text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-}
-
-.loser {
-  visibility: hidden;
+.winner-screen {
   font-family: 'Calligraffitti', cursive;
   font-weight: bolder;
   font-size: 45px;
