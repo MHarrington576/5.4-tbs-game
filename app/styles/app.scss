@@ -106,7 +106,7 @@ a {
   background-color: $kh;
   border: 2px solid #A4A4A4;
   color: #FFFFFF;
-  font-family: 'Nova Flat', cursive;
+  font-family: 'Nova Flat', monospace;
   font-size: 25px;
   width: 150px;
   height: 50px;
@@ -151,6 +151,19 @@ a {
     color: #A4A4A4;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   }
+}
+
+#attack, #health-potion, #shield {
+  position: relative;
+  display: inline-block;
+  background-color: $kh;
+  border: 2px solid #A4A4A4;
+  color: #FFFFFF;
+  font-family: 'Nova Flat', monospace;
+  font-size: 25px;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
 }
 
 .level-one {
@@ -235,4 +248,18 @@ a {
    1px -1px 0 #000,
    -1px 1px 0 #000,
    1px 1px 0 #000;
+  margin-left: 5px;
+}
+
+#play-again-winner {
+  position: relative;
+  display: inline-block;
+  background-color: $kh;
+  border: 2px solid #A4A4A4;
+  color: #FFFFFF;
+  font-family: 'Nova Flat', monospace;
+  font-size: 25px;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
 }

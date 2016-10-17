@@ -5,7 +5,6 @@ var listTemplate = require('../templates/listTemplate.hbs');
 
 /////////////////////////////////// Variables //////////////////////////////////
 var $titleScreen = $(".title-screen");
-var $instructionsScreen = $(".instructions-screen");
 var $charSelectScreen = $(".character-select-screen");
 var $heartlessBattle1 = $(".level-one");
 var $heartlessBattle2 = $(".level-two");
@@ -84,7 +83,6 @@ var thirdEnemy = _.sample(enemyBank3);
 
 ////////////////////////////////// Title Screen ////////////////////////////////
 var newGameBtn = $('#start-button');
-var instructionsBtn = $('#instructions-button');
 
 function launchGame(){
   $titleScreen.removeClass("active");
@@ -93,27 +91,7 @@ function launchGame(){
   $charSelectScreen.addClass("active");
 }
 
-function displayInstructions(){
-  $titleScreen.removeClass("active");
-  $titleScreen.addClass("dormant");
-  $instructionsScreen.removeClass("dormant");
-  $instructionsScreen.addClass("active");
-}
-
 newGameBtn.addEventListener('click', launchGame());
-instructionsBtn.addEventListener('click', displayInstructions());
-
-///////////////////////////////// Instructions /////////////////////////////////
-var exitInstructionsBtn = $("#exit-instructions-button");
-
-function returnToTitleFromInstructions(){
-  $instructionsScreen.removeClass("active");
-  $instructionsScreen.addClass("dormant");
-  $titleScreen.removeClass("dormant");
-  $titleScreen.addClass("active");
-}
-
-exitInstructionsBtn.addEventListener('click', returnToTitleFromInstructions());
 
 /////////////////////////////// Character Select ///////////////////////////////
 var toBattleBtn = $("#to-battle-button");
@@ -242,8 +220,8 @@ shieldBtn.on('click', function(event){
   useShield();
 });
 
-playerHealthBar.style.width = (player.health / 10) + '%';
-enemyHealthBar.style.width = (enemy.health / 10) + '%';
+playerHealthBar.style.width = (player.health / 10) + 'px';
+enemyHealthBar.style.width = (enemy.health / 10) + 'px';
 
 if(player.health <= 0){
   alert("Game over! You failed to kill all the enemies.");
