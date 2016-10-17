@@ -16,66 +16,66 @@ var $victoryScreen = $(".winner-screen");
 var heroes = [
   new models.PlayerChar(
     {name: 'Sora', image:'images/fighting-sora.png',
-    health: 1000, strength-min: 160, strength-max: 300});
+    health: 1000, strength_min: 160, strength_max: 300});
   new models.PlayerChar(
     {name: 'Roxas', image:'images/fighting-roxas.png',
-    health: 1000, strength-min: 150, strength-max: 310});
+    health: 1000, strength_min: 150, strength_max: 310});
   new models.PlayerChar(
     {name: 'Riku', image:'images/fighting-riku.png',
-    health: 1000, strength-min: 175, strength-max: 285});
+    health: 1000, strength_min: 175, strength_max: 285});
   new models.PlayerChar(
     {name: 'Kairi', image:'images/fighting-kairi.png',
-    health: 1000, strength-min: 170, strength-max: 295});
+    health: 1000, strength_min: 170, strength_max: 295});
 ];
 
 var enemyBank1 = [
   new models.EnemyChar(
     {name: 'HL Shadow One', image:'../images/shadow-one.png',
-    health: 500, strength-min: 55, strength-max:110});
+    health: 500, strength_min: 55, strength_max:110});
   new models.EnemyChar(
     {name: 'HL Shadow Two', image:'../images/shadow-two.png',
-    health: 500, strength-min: 55, strength-max:110});
+    health: 500, strength_min: 55, strength_max:110});
   new models.EnemyChar(
     {name: 'HL Shadow Three', image:'../images/shadow-three.png',
-    health: 500, strength-min: 55, strength-max:110});
+    health: 500, strength_min: 55, strength_max:110});
   new models.EnemyChar(
     {name: 'HL Red Nocturne', image:'../images/red-nocturne.png',
-    health: 500, strength-min: 55, strength-max:110});
+    health: 500, strength_min: 55, strength_max:110});
 ];
 
 var enemyBank2 = [
   new models.EnemyChar(
     {name: 'HL Fire Plant', image:'../images/fire-plant.png',
-    health: 750, strength-min: 90, strength-max:175});
+    health: 750, strength_min: 90, strength_max:175});
   new models.EnemyChar(
     {name: 'HL Blue Rhapsody', image:'../images/blue-rhapsody.png',
-    health: 750, strength-min: 90, strength-max:175});
+    health: 750, strength_min: 90, strength_max:175});
   new models.EnemyChar(
     {name: 'HL Powerwild', image:'../images/powerwild.png',
-    health: 750, strength-min: 90, strength-max:175});
+    health: 750, strength_min: 90, strength_max:175});
   new models.EnemyChar(
     {name: 'HL Soldier', image:'../images/soldier.png',
-    health: 750, strength-min: 90, strength-max:175});
+    health: 750, strength_min: 90, strength_max:175});
 ];
 
 var enemyBank3 = [
   new models.EnemyChar(
     {name: 'HL Armored Knight', image:'../images/armored-knight.png',
-    health: 1000, strength-min: 120, strength-max:200});
+    health: 1000, strength_min: 120, strength_max:200});
   new models.EnemyChar(
     {name: 'HL Gargoyle', image:'../images/gargoyle.png',
-    health: 1000, strength-min: 120, strength-max:200});
+    health: 1000, strength_min: 120, strength_max:200});
   new models.EnemyChar(
     {name: 'HL Large Body', image:'../images/large-body.png',
-    health: 1000, strength-min: 120, strength-max:200});
+    health: 1000, strength_min: 120, strength_max:200});
   new models.EnemyChar(
     {name: 'HL Armored Guard', image:'../images/armored-guard.png',
-    health: 1000, strength-min: 120, strength-max:200});
+    health: 1000, strength_min: 120, strength_max:200});
 ];
 
 var finalBoss = new models.EnemyChar(
     {name: 'HL Boss', image:'../images/boss.png',
-    health: 1850, strength-min: 145, strength-max:255});
+    health: 1850, strength_min: 145, strength_max:255});
 
 var player = undefined; //selected by user at start of game
 var firstEnemy = _.sample(enemyBank1);
