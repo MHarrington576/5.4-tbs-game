@@ -5,21 +5,13 @@ var listTemplate = require('../templates/listTemplate.hbs');
 
 /////////////////////////////////// Variables //////////////////////////////////
 var $titleScreen = $(".title-screen");
-  $titleScreen.addClass("show");
 var $instructionsScreen = $(".instructions-screen");
-  $instructionsScreen.addClass("hide");
 var $charSelectScreen = $(".character-select-screen");
-  $charSelectScreen.addClass("hide");
 var $heartlessBattle1 = $(".level-one");
-  $heartlessBattle1.addClass("hide");
 var $heartlessBattle2 = $(".level-two");
-  $heartlessBattle2.addClass("hide");
 var $heartlessBattle3 = $(".level-three");
-  $heartlessBattle3.addClass("hide");
 var $heartlessBossBattle = $(".final-level");
-  $heartlessBossBattle.addClass("hide");
 var $victoryScreen = $(".winner-screen");
-  $victoryScreen.addClass("hide");
 
 var heroes = [
   new models.PlayerChar(
@@ -91,17 +83,17 @@ var newGameBtn = $('#start-button');
 var instructionsBtn = $('#instructions-button');
 
 function launchGame(){
-  $titleScreen.removeClass("show");
-  $titleScreen.addClass("hide");
-  $charSelectScreen.removeClass("hide");
-  $charSelectScreen.addClass("show");
+  $titleScreen.removeClass("active");
+  $titleScreen.addClass("dormant");
+  $charSelectScreen.removeClass("dormant");
+  $charSelectScreen.addClass("active");
 }
 
 function displayInstructions(){
-  $titleScreen.removeClass("show");
-  $titleScreen.addClass("hide");
-  $instructionsScreen.removeClass("hide");
-  $instructionsScreen.addClass("show");
+  $titleScreen.removeClass("active");
+  $titleScreen.addClass("dormant");
+  $instructionsScreen.removeClass("dormant");
+  $instructionsScreen.addClass("active");
 }
 
 newGameBtn.addEventListener('click', launchGame());
@@ -111,10 +103,10 @@ instructionsBtn.addEventListener('click', displayInstructions());
 var exitInstructionsBtn = $("#exit-instructions-button");
 
 function returnToTitleFromInstructions(){
-  $instructionsScreen.removeClass("show");
-  $instructionsScreen.addClass("hide");
-  $titleScreen.removeClass("hide");
-  $titleScreen.addClass("show");
+  $instructionsScreen.removeClass("active");
+  $instructionsScreen.addClass("dormant");
+  $titleScreen.removeClass("dormant");
+  $titleScreen.addClass("active");
 }
 
 exitInstructionsBtn.addEventListener('click', returnToTitleFromInstructions());
@@ -137,10 +129,10 @@ $('.character-select-photo').on('click', function(event){
 });
 
 function beginBattle(){
-  $charSelectScreen.removeClass("show");
-  $charSelectScreen.addClass("hide");
-  $heartlessBattle1.removeClass("hide");
-  $heartlessBattle1.addClass("show");
+  $charSelectScreen.removeClass("active");
+  $charSelectScreen.addClass("dormant");
+  $heartlessBattle1.removeClass("dormant");
+  $heartlessBattle1.addClass("active");
 }
 
 toBattleBtn.on('click', function(event){
@@ -182,49 +174,49 @@ function useShield(){
 }
 
 function returnToTitleFromBattle(){
-  if($heartlessBattle1.hasClass("show")) {
-    $heartlessBattle1.removeClass("show");
-    $heartlessBattle1.addClass("hide");
-  } if else($heartlessBattle2.hasClass("show")) {
-      $heartlessBattle2.removeClass("show");
-      $heartlessBattle2.addClass("hide");
-  } if else($heartlessBattle3.hasClass("show")) {
-      $heartlessBattle3.removeClass("show");
-      $heartlessBattle3.addClass("hide");
-  } if else($heartlessBossBattle.hasClass("show")) {
-      $heartlessBossBattle.removeClass("show");
-      $heartlessBossBattle.addClass("hide");
+  if($heartlessBattle1.hasClass("active")) {
+    $heartlessBattle1.removeClass("active");
+    $heartlessBattle1.addClass("dormant");
+  } if else($heartlessBattle2.hasClass("active")) {
+      $heartlessBattle2.removeClass("active");
+      $heartlessBattle2.addClass("dormant");
+  } if else($heartlessBattle3.hasClass("active")) {
+      $heartlessBattle3.removeClass("active");
+      $heartlessBattle3.addClass("dormant");
+  } if else($heartlessBossBattle.hasClass("active")) {
+      $heartlessBossBattle.removeClass("active");
+      $heartlessBossBattle.addClass("dormant");
   }
-  $titleScreen.removeClass("hide");
-  $titleScreen.addClass("show");
+  $titleScreen.removeClass("dormant");
+  $titleScreen.addClass("active");
 }
 
 function advanceToBattle2(){
-  $heartlessBattle1.removeClass("show");
-  $heartlessBattle1.addClass("hide");
-  $heartlessBattle2.removeClass("hide");
-  $heartlessBattle2.addClass("show");
+  $heartlessBattle1.removeClass("active");
+  $heartlessBattle1.addClass("dormant");
+  $heartlessBattle2.removeClass("dormant");
+  $heartlessBattle2.addClass("active");
 }
 
 function advanceToBattle3(){
-  $heartlessBattle2.removeClass("show");
-  $heartlessBattle2.addClass("hide");
-  $heartlessBattle3.removeClass("hide");
-  $heartlessBattle3.addClass("show");
+  $heartlessBattle2.removeClass("active");
+  $heartlessBattle2.addClass("dormant");
+  $heartlessBattle3.removeClass("dormant");
+  $heartlessBattle3.addClass("active");
 }
 
 function advanceToBossBattle(){
-  $heartlessBattle3.removeClass("show");
-  $heartlessBattle3.addClass("hide");
-  $heartlessBossBattle.removeClass("hide");
-  $heartlessBossBattle.addClass("show");
+  $heartlessBattle3.removeClass("active");
+  $heartlessBattle3.addClass("dormant");
+  $heartlessBossBattle.removeClass("dormant");
+  $heartlessBossBattle.addClass("active");
 }
 
 function toVictoryScreen(){
-  $heartlessBossBattle.removeClass("show");
-  $heartlessBossBattle.addClass("hide");
-  $victoryScreen.removeClass("hide");
-  $victoryScreen.addClass("show");
+  $heartlessBossBattle.removeClass("active");
+  $heartlessBossBattle.addClass("dormant");
+  $victoryScreen.removeClass("dormant");
+  $victoryScreen.addClass("active");
 }
 
 attackBtn.on('click', function(event){
@@ -274,10 +266,10 @@ if(finalBoss.health <= 0){
 var endGameBtn = $("#end-game-btn");
 
 function returnToTitleFromVictory(){
-  $victoryScreen.removeClass("show");
-  $victoryScreen.addClass("hide");
-  $titleScreen.removeClass("hide");
-  $titleScreen.addClass("show");
+  $victoryScreen.removeClass("active");
+  $victoryScreen.addClass("dormant");
+  $titleScreen.removeClass("dormant");
+  $titleScreen.addClass("active");
 }
 
 endGameBtn.on('click', function(event){

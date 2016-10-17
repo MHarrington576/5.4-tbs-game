@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Kingdom Hearts Game</title>
+    <title>Kingdom Hearts: Decoded</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
 
 
 <!--///////////////////////////////Title Screen//////////////////////////////-->
-    <div class="title-screen">
+    <div class="title-screen active">
       <div class="row">
         <div class="col-md-12">
-          <h1>Kingdom Hearts Game!</h1>
+          <h1 id="kh">Kingdom Hearts:</h1><h1 id="dc"> Decoded</h1>
           <h2>
             Help Sora and his friends defeat the Heartless!
           </h2>
@@ -21,21 +21,23 @@
       </div>
       <div class="row">
         <div class="col-md-5">
+          <div class="title-pic-1">
+            <img id="title-screen-pic-1" src="images/kingdom-hearts-logo.png">
+          </div>
           <div class="press-start">
-            <button class="btn btn-default" id="start-button" type="submit"></button>
-            <a href="#"><h3>Press Start</h3></a>
+            <button id="start-button">New Game</button>
           </div>
         </div>
         <div class="col-md-7">
-          <div class="title-pic">
-            <img src="images/starter-image.jpg">
+          <div class="title-pic-2">
+            <img id="title-screen-pic-2" src="images/starter-image.jpg">
           </div>
         </div>
       </div>
     </div>
 
 <!--//////////////////////////////Instructions///////////////////////////////-->
-    <div class="instructions-screen">
+    <div class="instructions-screen dormant">
       <div class="row">
         <div class="col-md-12">
           <h2>Instructions</h2>
@@ -51,70 +53,82 @@
     </div>
 
 <!--/////////////////////////Character Select Screen/////////////////////////-->
-    <div class="character-select-screen">
+    <div class="character-select-screen dormant">
       <h2>Choose a Character!</h2>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 dormant" id="sora-selected">
           <img src="images/char-sora.png">
-          <a href="#"><h3>Sora</h3></a>
+          <h3>Sora</h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 dormant" id="roxas-selected">
           <img src="images/char-roxas.png">
-          <a href="#"><h3>Roxas<h3></a>
+          <h3>Roxas<h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 dormant" id="riku-selected">
           <img src="images/char-riku.png">
-          <a href="#"><h3>Riku</h3></a>
+          <h3>Riku</h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 dormant" id="kairi-selected">
           <img src="images/char-kairi.png">
-          <a href="#"><h3>Kairi</h3></a>
+          <h3>Kairi</h3>
         </div>
       </div>
     </div>
 
 <!--/////////////////////////////////Battles/////////////////////////////////-->
-    <div class="row level-one">
+    <div class="row level-one dormant">
       <div class="col-md-12">
         <h1 class="level-title-one">Level One</h1>
+        <div class="fight-options">
+          <button class="btn btn-default" id="attack" type="submit">Attack</button>
+          <button class="btn btn-default" id="health-potion" type="submit">Restore Health</button>
+          <button class="btn btn-default" id="sheild" type="submit">Use Shield</button>
+        </div>
       </div>
     </div>
 
-    <div class="row level-two">
+    <div class="row level-two dormant">
       <div class="col-md-12">
         <h1 class="level-title-two">Level Two</h1>
+        <div class="fight-options">
+          <button class="btn btn-default" id="attack" type="submit">Attack</button>
+          <button class="btn btn-default" id="health-potion" type="submit">Restore Health</button>
+          <button class="btn btn-default" id="sheild" type="submit">Use Shield</button>
+        </div>
       </div>
     </div>
 
-    <div class="row level-three">
+    <div class="row level-three dormant">
       <div class="col-md-12">
         <h1 class="level-title-three">Level Three</h1>
+        <div class="fight-options">
+          <button class="btn btn-default" id="attack" type="submit">Attack</button>
+          <button class="btn btn-default" id="health-potion" type="submit">Restore Health</button>
+          <button class="btn btn-default" id="sheild" type="submit">Use Shield</button>
+        </div>
       </div>
     </div>
 
-    <div class="row final-level">
+    <div class="row final-level dormant">
       <div class="col-md-12">
         <h1 class="level-title-final">Final Level!</h1>
+        <div class="fight-options">
+          <button class="btn btn-default" id="attack" type="submit">Attack</button>
+          <button class="btn btn-default" id="health-potion" type="submit">Restore Health</button>
+          <button class="btn btn-default" id="sheild" type="submit">Use Shield</button>
+        </div>
       </div>
     </div>
 
-    <div class="chosen-char">
-      <div class="health-bar">
-        <span></span>
-      </div>
-      <div class="fight-options">
-        <button class="btn btn-default" id="attack" type="submit">Attack</button>
-        <button class="btn btn-default" id="health-potion" type="submit">Restore Health</button>
-        <button class="btn btn-default" id="sheild" type="submit">Use Shield</button>
+    <div class="player-character">
+      <div class="player-health-bar">
+        <span> </span>
       </div>
     </div>
 
-    <div class="enemy-char">
-      <div class="health-bar">
-        <span></span>
-      </div>
-      <div class="fight-options">
-        <span id="enemy-attack"></span>
+    <div class="enemy-character">
+      <div class="enemy-health-bar">
+        <span> </span>
       </div>
     </div>
 
@@ -127,9 +141,9 @@
     </div>
 
 <!--//////////////////////////////Victory Screen/////////////////////////////-->
-    <div class="winner-screen">
+    <div class="row winner-screen dormant">
       <h2 id="winner-message">Congratulations, you've defeated the Heartless!</h2>
-        <button class="btn btn-default" id="play-again-winner" type="submit">Play Again?</button>
+        <button id="play-again-winner">Play Again!</button>
     </div>
 
 
