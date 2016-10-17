@@ -27,7 +27,6 @@ function Enemy(config){
 function EnemyChar(){
   Enemy.call(this, config);
   this.name = undefined;
-  this.health = 500; //redefined when called in index.js
   this.strength = undefined; //random 55-110, 90-175, 120-200, 170-250 player hp decrease
 }
 

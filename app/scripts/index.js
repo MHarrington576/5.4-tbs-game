@@ -6,10 +6,10 @@ var listTemplate = require('../templates/listTemplate.hbs');
 /////////////////////////////////// Variables //////////////////////////////////
 var $titleScreen = $(".title-screen");
   $titleScreen.addClass("show");
-var $charSelectScreen = $(".character-select-screen");
-  $charSelectScreen.addClass("hide");
 var $instructionsScreen = $(".instructions-screen");
   $instructionsScreen.addClass("hide");
+var $charSelectScreen = $(".character-select-screen");
+  $charSelectScreen.addClass("hide");
 var $heartlessBattle1 = $(".level-one");
   $heartlessBattle1.addClass("hide");
 var $heartlessBattle2 = $(".level-two");
@@ -23,13 +23,13 @@ var $victoryScreen = $(".winner-screen");
 
 var heroes = [
   new models.PlayerChar(
-    {name: 'Sora', image:'images/fighting-sora.png' health: 1200});
+    {name: 'Sora', image:'images/fighting-sora.png', health: 1200});
   new models.PlayerChar(
-    {name: 'Roxas', image:'images/fighting-roxas.png' health: 1150});
+    {name: 'Roxas', image:'images/fighting-roxas.png', health: 1150});
   new models.PlayerChar(
-    {name: 'Riku', image:'images/fighting-riku.png' health: 1100});
+    {name: 'Riku', image:'images/fighting-riku.png', health: 1100});
   new models.PlayerChar(
-    {name: 'Kairi', image:'images/fighting-kairi.png' health: 950});
+    {name: 'Kairi', image:'images/fighting-kairi.png', health: 950});
 ];
 
 var enemyBank1 = [

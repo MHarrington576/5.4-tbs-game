@@ -8,6 +8,8 @@
   </head>
   <body>
 
+
+<!--///////////////////////////////Title Screen//////////////////////////////-->
     <div class="title-screen">
       <div class="row">
         <div class="col-md-12">
@@ -32,7 +34,24 @@
       </div>
     </div>
 
-    <div class="select-character-screen">
+<!--//////////////////////////////Instructions///////////////////////////////-->
+    <div class="instructions-screen">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Instructions</h2>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button id="#exit-instructions-button">Back to Title Screen</button>
+        </div>
+      </div>
+    </div>
+
+<!--/////////////////////////Character Select Screen/////////////////////////-->
+    <div class="character-select-screen">
       <h2>Choose a Character!</h2>
       <div class="row">
         <div class="col-md-3">
@@ -54,8 +73,7 @@
       </div>
     </div>
 
-    <div class="launch-game"></div>
-
+<!--/////////////////////////////////Battles/////////////////////////////////-->
     <div class="level-one">
         <h1 class="level-title-one">Level One!</h1>
     </div>
@@ -100,15 +118,12 @@
         <!-- Populates from javascript -->
     </div>
 
-    <div class="winner">
+<!--//////////////////////////////Victory Screen/////////////////////////////-->
+    <div class="winner-screen">
       <h2 id="winner-message">Congratulations, you've defeated the heartless!</h2>
         <button class="btn btn-default" id="play-again-winner" type="submit">Play Again?</button>
     </div>
 
-    <div class="loser">
-      <h2 id="loser-message">Oh no! You were defeated...</h2>
-        <button class="btn btn-default" id="play-again-loser" type="submit">Play Again?</button>
-    </div>
 
     <script src="js/bundle.js"></script>
   </body>
